@@ -83,5 +83,13 @@ def is_good_movie(movie):
 
 
 
-print(is_good_movie(movies[0])) 
-print(is_good_movie(movies[7])) 
+#print(is_good_movie(movies[0])) 
+#print(is_good_movie(movies[7])) 
+
+def good_movies(movies):
+    return [movie for movie in movies if movie["imdb"] > 5.5]
+
+
+result = good_movies(movies)
+for m in result:
+    print(m["name"], "->", m["imdb"])
