@@ -22,8 +22,15 @@
 
 #get_list(first = "Aisulu")
 
-def get_list(*args):
-    print(args)
-    print(f"First student name is {args[2]}")
+#def get_list(*args):
+#    print(args)
+#    print(f"First student name is {args[2]}")
 
-get_list("Azamat", 12, "Aisulu", "Arman")
+#get_list("Azamat", 12, "Aisulu", "Arman")
+
+def get_first_student(**kwargs): #ket word arguments
+    print(kwargs["first"])
+    return kwargs["first"]
+
+a = get_first_student(first = "Azamat", second = "Aisulu")
+print(a)
