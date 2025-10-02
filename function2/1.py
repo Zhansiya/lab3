@@ -90,6 +90,15 @@ def good_movies(movies):
     return [movie for movie in movies if movie["imdb"] > 5.5]
 
 
-result = good_movies(movies)
+#result = good_movies(movies)
+#for m in result:
+#    print(m["name"], "->", m["imdb"])
+
+
+def movies_by_category(movies, category_name):
+    return [movie for movie in movies if movie["category"].lower() == category_name.lower()]
+
+
+result = movies_by_category(movies, "Romance")
 for m in result:
-    print(m["name"], "->", m["imdb"])
+    print(m["name"], "->", m["category"], "| IMDB:", m["imdb"])
