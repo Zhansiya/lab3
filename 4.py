@@ -15,4 +15,9 @@ def a_pluse_b(a, b):
 def power_of_two(*, n):
     return 2 ** n
 
-print(power_of_two(n = int(input())))
+#print(power_of_two(n = int(input())))
+
+def get_list(*, first = "Aybek", second = "Azamat"):
+    print(first, second)
+
+get_list(first = "Aisulu")
