@@ -111,4 +111,17 @@ def average_imdb(movies_list):
     return total / len(movies_list)
 
 
-print("Average IMDB score of all movies:", average_imdb(movies))
+#print("Average IMDB score of all movies:", average_imdb(movies))
+
+def average_imdb_by_category(movies_list, category):
+    category_movies = [movie["imdb"] for movie in movies_list if movie["category"] == category]
+    
+    if not category_movies: 
+        return 0
+    
+    return sum(category_movies) / len(category_movies)
+
+
+print("Average IMDB (Romance):", average_imdb_by_category(movies, "Romance"))
+print("Average IMDB (Thriller):", average_imdb_by_category(movies, "Thriller"))
+print("Average IMDB (Comedy):", average_imdb_by_category(movies, "Comedy"))
