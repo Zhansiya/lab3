@@ -1,11 +1,11 @@
-i = 1
-n = int(input())
+#i = 1
+#n = int(input())
 
-s = ""
-while(n > 0):
-    s = f"{s} {i}"
-    i = i * 2
-    n = n - 1
+#s = ""
+#while(n > 0):
+#    s = f"{s} {i}"
+#    i = i * 2
+#    n = n - 1
 
 n = int(input())
 i = 2
