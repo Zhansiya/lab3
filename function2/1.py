@@ -99,6 +99,16 @@ def movies_by_category(movies, category_name):
     return [movie for movie in movies if movie["category"].lower() == category_name.lower()]
 
 
-result = movies_by_category(movies, "Romance")
-for m in result:
-    print(m["name"], "->", m["category"], "| IMDB:", m["imdb"])
+#result = movies_by_category(movies, "Romance")
+#for m in result:
+#    print(m["name"], "->", m["category"], "| IMDB:", m["imdb"])
+
+
+def average_imdb(movies_list):
+    if not movies_list:  # бос тізім болса
+        return 0
+    total = sum(movie["imdb"] for movie in movies_list)
+    return total / len(movies_list)
+
+
+print("Average IMDB score of all movies:", average_imdb(movies))
